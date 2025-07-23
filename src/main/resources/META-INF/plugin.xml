@@ -1,0 +1,25 @@
+<idea-plugin>
+    <id>com.yourcompany.breakpointmanager</id>
+    <name>Breakpoint Manager</name>
+    <version>1.0</version>
+    <vendor email="support@yourcompany.com" url="http://yourcompany.com">YourCompany</vendor>
+
+    <description>
+        <![CDATA[
+        Plugin that provides Telnet interface to manage breakpoints.<br>
+        Commands:
+        <ul>
+            <li>ebp - enable all breakpoints</li>
+            <li>dbp - disable all breakpoints</li>
+            <li>exit - close connection</li>
+        </ul>
+        ]]>
+    </description>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.java</depends> <!-- Для доступа к Java-специфичным API -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <postStartupActivity implementation="com.yourcompany.plugin.BreakpointManagerPlugin"/>
+    </extensions>
+</idea-plugin>
